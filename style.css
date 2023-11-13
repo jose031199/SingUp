@@ -4,6 +4,7 @@
     /*Colors*/
     --gold:gold;
     --white:white;
+    --dark:rgb(7, 7, 7);
     --activeBorder:rgb(31, 93, 31);
     --inactiveBorder:rgb(128, 33, 33);
     --inputColor:rgb(54, 143, 215);
@@ -29,7 +30,7 @@ box-sizing: border-box;
 
 /*Logo Background*/
 .container{
-    width: 80%;
+    width: 100%;
     display: var(--flexDisplay);
     justify-content: center;
     align-items: center;
@@ -98,4 +99,82 @@ box-sizing: border-box;
     .container_logo--desc p{
         font-size: var(--sizeMedium);
     }
+}
+
+/*Form section*/
+.container_singUp{
+    background-color: var(--dark);
+    height: 100vh;
+    text-align: center;
+    width: inherit;
+    display: var(--flexDisplay);
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container_singUp--intro{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.container_singUp--intro h2{
+    font-size: var(--sizeBig);
+    margin-bottom: 35px;
+}
+
+.container_singUp--intro p{
+    font-size: var(--sizeMedium);
+}
+
+form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin:0 25px;
+}
+
+form input{
+    border: none;
+    background-color: var(--dark);
+    font-size: var(--sizeMedium);
+    margin-top: 15px;
+}
+
+form input[type=text],[type=email],[type=password],[type=number]:valid{
+    border-bottom:4px solid var(--activeBorder);
+}
+
+form input[type=text],[type=email],[type=password],[type=number]:invalid{
+    border-bottom:4px solid var(--inactiveBorder);
+}
+
+form input[type = submit]{
+    margin-top: 50px;
+    background-color: var(--gold);
+    border-radius: 10px;
+    padding: 15px;
+    font-size: var(--sizeMedium);
+    font-weight: bold;
+    transition: background-color 2s;
+}
+
+form input[type = submit]:hover{
+    background-color: rgba(191, 166, 26, 0.864);
+}
+
+.alert{
+    color: var(--white);
+    font-size: 20px;
+}
+
+.alert span{
+    border-bottom: 2px solid var(--gold);
+    color: green;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: padding 1s;
+}
+
+.alert span:hover{
+    padding:0 10px;
 }

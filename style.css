@@ -28,7 +28,7 @@ padding: 0;
 box-sizing: border-box;
 }
 
-/*Logo Background*/
+/*container_logo*/
 .container{
     width: 100%;
     display: var(--flexDisplay);
@@ -82,8 +82,11 @@ box-sizing: border-box;
 
 
 /*css media queries tablets*/
-@media(max-width:756px){
+@media(max-width:768px){
 
+    .container{
+        flex-direction: column;
+    }
     .container_logo img{
         height: 180px;
     }
@@ -91,6 +94,7 @@ box-sizing: border-box;
         font-size: var(--sizeBig);
     }
 }
+/*css media queries phone*/
 
 @media(max-width:480px){
     .container_logo img{
@@ -101,7 +105,7 @@ box-sizing: border-box;
     }
 }
 
-/*Form section*/
+/*container_singUp*/
 .container_singUp{
     background-color: var(--dark);
     height: 100vh;
@@ -116,6 +120,7 @@ box-sizing: border-box;
     margin-top: 10px;
     margin-bottom: 20px;
     color: var(--white);
+    text-align: center;
 }
 
 .container_singUp--intro h2{
@@ -138,6 +143,8 @@ form input{
     background-color: var(--dark);
     font-size: var(--sizeMedium);
     margin-top: 15px;
+    color: var(--inputColor);
+    margin-left: 15px;
 }
 
 form input[type=text],[type=email],[type=password],[type=number]:valid{
@@ -156,6 +163,7 @@ form input[type = submit]{
     font-size: var(--sizeMedium);
     font-weight: bold;
     transition: background-color 2s;
+    color: black;
 }
 
 form input[type = submit]:hover{
@@ -177,4 +185,22 @@ form input[type = submit]:hover{
 
 .alert span:hover{
     padding:0 10px;
+}
+
+/*container_singUp mobile*/
+/*css media queries tablets*/
+@media(max-width:768px){
+    form{
+        grid-template-columns: repeat(1,1fr);
+    }
+    form input[type=text],[type=email],[type=password],[type=number]{
+        width: 70%;
+        font-size: 20px;
+    }
+    .container_singUp--intro p{
+        font-size: 20px;
+    }
+
+
+
 }

@@ -1,0 +1,45 @@
+:root{
+    --fontFamily:'Poppins', sans-serif;
+    
+    /*Colors*/
+    --gold:gold;
+    --activeBorder:rgb(31, 93, 31);
+    --inactiveBorder:rgb(128, 33, 33);
+    --inputColor:rgb(54, 143, 215);
+
+    /*BsckgroundColor*/
+    --btnBgColor:white;
+    --btnBgColorFocus:black;
+
+    /*FontSizes*/
+    --sizeSmall:15px;
+    --sizeMedium:30px;
+    --sizeBig:50px;
+
+    /*Display*/
+    --flexDisplay:flex;
+}
+
+*,*::after,*::before{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+.container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container_logo{
+    width: inherit;
+    background:linear-gradient(90deg, rgba(4,9,30,0.7), rgba(4,9,30,0.7)),url('/images/concert.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}

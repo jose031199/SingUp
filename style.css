@@ -3,10 +3,10 @@
     
     /*Colors*/
     --gold:gold;
+    --white:white;
     --activeBorder:rgb(31, 93, 31);
     --inactiveBorder:rgb(128, 33, 33);
     --inputColor:rgb(54, 143, 215);
-
     /*BsckgroundColor*/
     --btnBgColor:white;
     --btnBgColorFocus:black;
@@ -15,6 +15,7 @@
     --sizeSmall:15px;
     --sizeMedium:30px;
     --sizeBig:50px;
+    --sizeTitle:60px;
 
     /*Display*/
     --flexDisplay:flex;
@@ -26,13 +27,13 @@ padding: 0;
 box-sizing: border-box;
 }
 
-
+/*Logo Background*/
 .container{
     width: 80%;
-    display: flex;
+    display: var(--flexDisplay);
     justify-content: center;
     align-items: center;
-
+    font-family: var(--fontFamily);
 }
 
 .container_logo{
@@ -42,4 +43,59 @@ box-sizing: border-box;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+.container_logo img{
+    height: 250px;
+    position: absolute;
+    left: -10px;
+    background-position: center;
+    margin: 5px 12px;
+}
+
+.container_logo--desc{
+    display: var(--flexDisplay);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    position: relative;
+    margin: 0 15px;
+}
+
+.container_logo--desc p{
+    color: var(--white);
+   font-size: var(--sizeTitle);
+   font-weight: bold;
+   font-style: italic;
+}
+
+.container_logo span{
+    color: var(--white);
+    font-size: 25px;
+    position: absolute;
+    bottom: 65px;
+}
+
+
+/*css media queries tablets*/
+@media(max-width:756px){
+
+    .container_logo img{
+        height: 180px;
+    }
+    .container_logo--desc p{
+        font-size: var(--sizeBig);
+    }
+}
+
+@media(max-width:480px){
+    .container_logo img{
+        height: 120px;
+    }
+    .container_logo--desc p{
+        font-size: var(--sizeMedium);
+    }
 }

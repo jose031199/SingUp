@@ -155,6 +155,10 @@ form input[type=text],[type=email],[type=password],[type=number]:invalid{
     border-bottom:4px solid var(--inactiveBorder);
 }
 
+.active{
+    border-bottom:4px solid var(--activeBorder);
+}
+
 form input[type = submit]{
     margin-top: 50px;
     background-color: var(--gold);
